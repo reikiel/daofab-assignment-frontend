@@ -1,0 +1,75 @@
+<div>
+  <h3 class="text-center" style="margin-top: 1%">
+    <b><u>Child Transaction List</u></b>
+  </h3>
+  <table class="mat-table">
+    <thead>
+      <tr class="mat-header-row">
+        <th
+          class="mat-header-cell"
+          scope="col"
+          [appSort]="children"
+          data-order="desc"
+          data-name="id"
+        >
+          ID
+        </th>
+        <th
+          class="mat-header-cell"
+          scope="col"
+          [appSort]="children"
+          data-order="desc"
+          data-name="id"
+        >
+          Parent ID
+        </th>
+        <th
+          class="mat-header-cell"
+          scope="col"
+          [appSort]="children"
+          data-order="desc"
+          data-name="sender"
+        >
+          Sender
+        </th>
+        <th
+          class="mat-header-cell"
+          scope="col"
+          [appSort]="children"
+          data-order="desc"
+          data-name="receiver"
+        >
+          Receiver
+        </th>
+        <th
+          class="mat-header-cell"
+          scope="col"
+          [appSort]="children"
+          data-order="desc"
+          data-name="totalAmount"
+        >
+          Total Amount
+        </th>
+        <th
+          class="mat-header-cell"
+          scope="col"
+          [appSort]="children"
+          data-order="desc"
+          data-name="paidAmount"
+        >
+          Paid Amount
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="mat-row" *ngFor="let child of children">
+        <td class="mat-cell">{{ child.id }}</td>
+        <td class="mat-cell">{{ child.parentId }}</td>
+        <td class="mat-cell">{{ child.sender }}</td>
+        <td class="mat-cell">{{ child.receiver }}</td>
+        <td class="mat-cell">{{ child.totalAmount }}</td>
+        <td class="mat-cell">{{ child.paidAmount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
